@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button</title>
+        <meta charset="utf-8">
+
+        <!--Ustalamy wygląd określonych części-->
+        <style>
+            body{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: larger;
+                background-color: beige;
+            }
+            /*Ustalamy wygląd klasy*przycisk* */
+            .Przycisk{
+                color: white;
+                background-color: black;
+                border-radius: 5px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h2>Wciśnij przycisk</h2>
+        <!--Inincjujemy przycisk, id, klasę, i wartość-->
+        <button id ="btn" class="Przycisk" value="VALUE">Kliknij by wprowadzić zmienne</button>
+
+        <script>
+            //Ustawiamy że przycisk ma jakąś wartość
+            let button = document.getElementById('btn');
+
+            //Ustawiamy oczekiwanie na wydarzenie 'kliknięcie', po którym są prowadzone działania 
+            button.addEventListener('click', (e) => {
+                //Incjujemy zmienną a i b
+                a = parseFloat(prompt('Wprowadz zmienną a')), b = parseFloat(prompt('Wprowadz zmienną b'));
+
+                document.write('<br>A * B = '+a * b);
+                document.write('<br>A / B = '+a / b);
+                document.write('<br>A do potęgi B = '+Math.pow(a,b));
+                document.write('<br>Pierwiastek z A = '+Math.sqrt(a));
+                document.write('<br>Pierwiastek z B = '+Math.sqrt(b));
+                
+                //Ustalamy wartość i które będzie bazą działania *do* oraz ustalamy co ma się dziać
+                var i=0;
+                do {
+                    document.write('<br>liczba A ale większa o 1 = '+ a )
+                    i++
+                    a++
+                } while(i<9)    //Dajemy wartość while(i<9) na końcy by mogła zadziałać do 10
+
+                //Powtarzamy działanie
+                var o=0;
+                do {
+                    document.write('<br>liczba B ale większa o 1 = '+ b )
+                    o++
+                    b++
+                } while(o<9)
+
+            })
+
+            
+        </script>
+        <!--Zrobione Przez użytkownika Oskarro1, https://github.com/Oskarro1-->
+    </body>
+</html>
